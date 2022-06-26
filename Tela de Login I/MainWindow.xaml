@@ -1,0 +1,54 @@
+﻿<Window x:Class="Tela_de_Login_I.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tela_de_Login_I"
+        WindowStyle="ToolWindow"
+        mc:Ignorable="d"
+        
+        Title="Login" Height="300" Width="400">
+    <!--Title (Nome da janela: Login, Height (Altura): 250,  Width (Largura): 350 //-->
+    
+    <!-- // Definição da Colunas //-->
+    <!-- // Width = LARGURA. Height = ALTURA //-->
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+    <!-- // Definição de linhas //-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+    <!-- //Alinhamento do Texto: Usuario com o bloco de texto, como: AUTO //-->        
+            <RowDefinition Height="auto" />
+    <!-- //Alinhamento do Texto: Senha com o bloco de texto, como: AUTO //-->
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+     <!-- // Estrtutura do usuario //-->
+     <!-- // Stack Panel = Painel, pra alinhar as informações //-->
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
+
+            <TextBlock Text="Usuário " TextAlignment="Center"/>
+            <TextBlock Width="124" />
+        </StackPanel>
+
+     <!-- //Margin (Nargen): 10: Esquerda, 5: Em cima, 0: Direita, 0: Em baixo //-->
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+
+            <TextBlock Text="Senha " Margin="-2,0,0,0" TextAlignment="Center"/>
+            <PasswordBox Width="124" />
+        </StackPanel>
+     
+     <!-- // Definindo botão-->
+        <Button Content="Login" Grid.Column="2" Width="60" Height="20" Grid.Row="3" HorizontalAlignment="Right"/>
+
+    </Grid>
+</Window>
