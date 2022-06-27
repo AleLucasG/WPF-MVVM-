@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tela_de_Login_I.ViewModels;
 
 namespace Tela_de_Login_I
 {
@@ -23,6 +24,8 @@ namespace Tela_de_Login_I
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new LogarViewModel();
+
         }
     }
 }
